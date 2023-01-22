@@ -18,15 +18,18 @@ namespace Console
 
         public void Display()
         {
+            System.Console.WriteLine("-----------------------------------------------------------------------------------------------");
+            System.Console.WriteLine("************************************** Trainer Information ************************************");
+            System.Console.WriteLine("-----------------------------------------------------------------------------------------------");
             System.Console.WriteLine("Enter Trainer Information");
-            System.Console.WriteLine("[0] Go Back");
-            System.Console.WriteLine("[1] Save");
-            System.Console.WriteLine("[2] FirstName - " + newuser.Firstname);
-            System.Console.WriteLine("[3] LastName - " + newuser.Lastname);
-            System.Console.WriteLine("[4] Email - " + newuser.Email);
-            System.Console.WriteLine("[5] Password - " + newuser.Password);
-            System.Console.WriteLine("[6] Gender - " + newuser.Gender);
-            System.Console.WriteLine("[7] Age - " + newuser.Age);
+            System.Console.WriteLine("1. FirstName      -                               " + newuser.Firstname);
+            System.Console.WriteLine("2. LastName       -                               " + newuser.Lastname);
+            System.Console.WriteLine("3. Email          -                               " + newuser.Email);
+            System.Console.WriteLine("4. Password       -                               " + newuser.Password);
+            System.Console.WriteLine("5. Gender         -                               " + newuser.Gender);
+            System.Console.WriteLine("6. Age            -                               " + newuser.Age);
+            System.Console.WriteLine("7. Save");
+            System.Console.WriteLine("8. Go Back");
         }
 
         public static int Pid()
@@ -50,9 +53,32 @@ namespace Console
             string userInput = System.Console.ReadLine();
             switch (userInput)
             {
-                case "0":
-                    return "Menu";
                 case "1":
+                    System.Console.WriteLine("Please enter a first name!");
+                    newuser.Firstname = System.Console.ReadLine();
+                    return "AddRecord";
+                case "2":
+                    System.Console.WriteLine("Please enter a Last name!");
+                    newuser.Lastname = System.Console.ReadLine();
+                    return "AddRecord";
+                case "3":
+                    System.Console.WriteLine("Please enter Email!");
+                    newuser.Email = System.Console.ReadLine();
+                    ema = newuser.Email;
+                    return "AddRecord";
+                case "4":
+                    System.Console.WriteLine("Please enter Password");
+                    newuser.Password = System.Console.ReadLine();
+                    return "AddRecord";
+                case "5":
+                    System.Console.WriteLine("Please enter Gender");
+                    newuser.Gender = System.Console.ReadLine();
+                    return "AddRecord";
+                case "6":
+                    System.Console.WriteLine("Please Age");
+                    newuser.Age = Convert.ToInt32(System.Console.ReadLine());
+                    return "AddRecord";
+                case "7":
                     try
                     {
                         Log.Information("Adding record \n" + newuser);
@@ -67,31 +93,8 @@ namespace Console
                         System.Console.ReadLine();
                     }
                     return "Signup";
-                case "2":
-                    System.Console.WriteLine("Please enter a first name!");
-                    newuser.Firstname = System.Console.ReadLine();
-                    return "AddRecord";
-                case "3":
-                    System.Console.WriteLine("Please enter a Last name!");
-                    newuser.Lastname = System.Console.ReadLine();
-                    return "AddRecord";
-                case "4":
-                    System.Console.WriteLine("Please enter Email!");
-                    newuser.Email = System.Console.ReadLine();
-                    ema = newuser.Email;
-                    return "AddRecord";
-                case "5":
-                    System.Console.WriteLine("Please enter Password");
-                    newuser.Password = System.Console.ReadLine();
-                    return "AddRecord";
-                case "6":
-                    System.Console.WriteLine("Please enter Gender");
-                    newuser.Gender = System.Console.ReadLine();
-                    return "AddRecord";
-                case "7":
-                    System.Console.WriteLine("Please Age");
-                    newuser.Age = Convert.ToInt32(System.Console.ReadLine());
-                    return "AddRecord";
+                case "8":
+                    return "Signup";
                 default:
                     System.Console.WriteLine("Please input a valid response");
                     System.Console.WriteLine("Please press Enter to continue");

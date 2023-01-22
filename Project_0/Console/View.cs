@@ -22,21 +22,37 @@ namespace Console
 
         public void Display()
         {
-            System.Console.WriteLine("------------------User Details--------------");
+            System.Console.WriteLine("-----------------------------------------------------------------------------------------------");
+            System.Console.WriteLine("******************************************** Trainer Details **********************************");
+            System.Console.WriteLine("-----------------------------------------------------------------------------------------------");
             System.Console.WriteLine($"{userobj.GetAll(id).ToString()}");
-            System.Console.WriteLine("------------------Skill Details--------------");
+
+            System.Console.WriteLine("-----------------------------------------------------------------------------------------------");
+            System.Console.WriteLine("********************************************** Skills *****************************************");
+            System.Console.WriteLine("-----------------------------------------------------------------------------------------------");
             System.Console.WriteLine($"{skillobj.GetAll(id).ToString()}");
-            System.Console.WriteLine("------------------Education Details--------------");
+
+            System.Console.WriteLine("-----------------------------------------------------------------------------------------------");
+            System.Console.WriteLine("********************************************* Education ***************************************");
+            System.Console.WriteLine("-----------------------------------------------------------------------------------------------");
             System.Console.WriteLine($"{edobj.GetAll(id).ToString()}");
-            System.Console.WriteLine("------------------Contact Details--------------");
+
+            System.Console.WriteLine("-----------------------------------------------------------------------------------------------");
+            System.Console.WriteLine("********************************************* Contact *****************************************");
+            System.Console.WriteLine("-----------------------------------------------------------------------------------------------");
             System.Console.WriteLine($"{contactobj.GetAll(id).ToString()}");
-            System.Console.WriteLine("------------------Experience Details--------------");
+
+            System.Console.WriteLine("-----------------------------------------------------------------------------------------------");
+            System.Console.WriteLine("********************************************* Experience **************************************");
+            System.Console.WriteLine("-----------------------------------------------------------------------------------------------");
             System.Console.WriteLine($"{companyobj.GetAll(id).ToString()}");
         }
 
         public String UserChoice()
         {
-            return "over";
+            System.Console.WriteLine("Press Enter To Continue");
+            System.Console.ReadKey();
+            return "Login";
         }
     }
 }

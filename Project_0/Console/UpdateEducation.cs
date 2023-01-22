@@ -20,14 +20,17 @@ namespace Console
         int pid = Validate.Pid();
         public void Display()
         {
-            System.Console.WriteLine("Update Education");
-            System.Console.WriteLine("[0] Go Back");
-            System.Console.WriteLine("[1] Update Higher Education - " + newupdate.HigherEducation);
-            System.Console.WriteLine("[2] Update University - " + newupdate.university);
-            System.Console.WriteLine("[3] Update startyear - " + newupdate.Startyear);
-            System.Console.WriteLine("[4] Update End year - " + newupdate.Endyear);
-            System.Console.WriteLine("[5] Update Grade - " + newupdate.Grade);
+            newupdate = repo.GetAll(pid);
+            System.Console.WriteLine("-----------------------------------------------------------------------------------------------");
+            System.Console.WriteLine("****************************************** Update Education ***********************************");
+            System.Console.WriteLine("-----------------------------------------------------------------------------------------------\n");
+            System.Console.WriteLine("[1] Update Higher Education       - " + newupdate.HigherEducation);
+            System.Console.WriteLine("[2] Update University             - " + newupdate.university);
+            System.Console.WriteLine("[3] Update startyear              - " + newupdate.Startyear);
+            System.Console.WriteLine("[4] Update End year               - " + newupdate.Endyear);
+            System.Console.WriteLine("[5] Update Grade                  - " + newupdate.Grade);
             System.Console.WriteLine("[6] save");
+            System.Console.WriteLine("[7] Go Back");
 
         }
 
@@ -36,8 +39,6 @@ namespace Console
             string userInput = System.Console.ReadLine();
             switch (userInput)
             {
-                case "0":
-                    return "Update";
                 case "1":
                     System.Console.WriteLine("Please enter a Higher Education!");
                     string HigherEducation = System.Console.ReadLine();
@@ -105,7 +106,7 @@ namespace Console
                     }
                     return "UpdateEducation";
                 case "6":
-                    try
+                    /*try
                     {
                         Log.Information("Adding record \n" + newupdate);
                         repo.Add(newupdate);
@@ -118,13 +119,17 @@ namespace Console
                         System.Console.WriteLine("Please press Enter to continue");
                         System.Console.ReadLine();
                     }
-                    System.Console.WriteLine("saved successful");
+                    System.Console.WriteLine("saved successful");*/
+                    System.Console.WriteLine("saved successfully");
+                    System.Console.ReadKey();
                     return "UpdateEducation";
+                case "7":
+                    return "GetEducation";
                 default:
                     System.Console.WriteLine("Please input a valid response");
                     System.Console.WriteLine("Please press Enter to continue");
                     System.Console.ReadLine();
-                    return "UpdateDetails";
+                    return "UpdateEducation";
             }
         }
     }

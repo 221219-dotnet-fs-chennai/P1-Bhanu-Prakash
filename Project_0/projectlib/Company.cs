@@ -19,7 +19,10 @@ namespace Console
 
         public override string ToString()
         {
-            return ($"{Userid} {PreviousCompany} {Technology} {ExperienceYear}");
+            return (
+                $"*Previous Company                          -              {PreviousCompany} " + "\n" +
+                $"*Technology                                -              {Technology} " + "\n" +
+                $"*Experience in Years                       -              {ExperienceYear}");
         }
     }
 }

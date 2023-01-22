@@ -13,7 +13,7 @@ namespace projectlib
         {
             this.Userid = Userid;
             this.HigherEducation = highereducation;
-            this.university= university;
+            this.university = university;
             this.Startyear = startyear;
             this.Endyear = endyear;
             this.Grade = grade;
@@ -21,14 +21,19 @@ namespace projectlib
 
         public int Userid { get; set; }
         public string HigherEducation { get; set; }
-        public string university{ get; set;}
+        public string university { get; set; }
         public int Startyear { get; set; }
         public int Endyear { get; set; }
         public string Grade { get; set; }
 
         public override string ToString()
         {
-            return ($"{Userid} {HigherEducation} {university} {Startyear} {Endyear} {Grade}");
+            return (
+                $"*Higher Education                         -               {HigherEducation} " + "\n" +
+                $"*University                               -               {university} " + "\n" +
+                $"*Start Year                               -               {Startyear} " + "\n" +
+                $"*End Year                                 -               {Endyear} " + "\n" +
+                $"*Grade                                    -               {Grade}");
         }
 
 

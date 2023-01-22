@@ -10,9 +10,11 @@ namespace Console
     {
         public void Display()
         {
-            System.Console.WriteLine("Hello Trainee");
-            System.Console.WriteLine("[s] - To SignUp");
-            System.Console.WriteLine("[l] - To Login");
+            System.Console.WriteLine("******************************************* Welcome to Online Trainer Platform **************************************");
+            System.Console.WriteLine("[s] - To SignUp                           [l] - To Login                  [0] - To Exit");
+            System.Console.WriteLine("Enter your response to continue");
+            //System.Console.WriteLine("[l] - To Login");
+            //System.Console.WriteLine("[0] - To Exit");
         }
         public string UserChoice()
         {

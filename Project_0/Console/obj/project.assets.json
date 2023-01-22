@@ -584,11 +584,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\.net\\Project_0\\Console\\Console.csproj",
+      "projectUniqueName": "D:\\.net\\P1-Bhanu-Prakash\\Project_0\\Console\\Console.csproj",
       "projectName": "Console",
-      "projectPath": "D:\\.net\\Project_0\\Console\\Console.csproj",
+      "projectPath": "D:\\.net\\P1-Bhanu-Prakash\\Project_0\\Console\\Console.csproj",
       "packagesPath": "C:\\Users\\Bhanu\\.nuget\\packages\\",
-      "outputPath": "D:\\.net\\Project_0\\Console\\obj\\",
+      "outputPath": "D:\\.net\\P1-Bhanu-Prakash\\Project_0\\Console\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Bhanu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -605,8 +605,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\.net\\Project_0\\projectlib\\projectlib.csproj": {
-              "projectPath": "D:\\.net\\Project_0\\projectlib\\projectlib.csproj"
+            "D:\\.net\\P1-Bhanu-Prakash\\Project_0\\projectlib\\projectlib.csproj": {
+              "projectPath": "D:\\.net\\P1-Bhanu-Prakash\\Project_0\\projectlib\\projectlib.csproj"
             }
           }
         }

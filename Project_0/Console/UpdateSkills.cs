@@ -17,15 +17,18 @@ namespace Console
         int pid = Validate.Pid();
         public void Display()
         {
-            System.Console.WriteLine("Update Trainer Skills");
-            System.Console.WriteLine("[0] Go Back");
-            System.Console.WriteLine("[1] Update primary Skill - " + newskills.Primaryskill);
-            System.Console.WriteLine("[2] Update Proficiency 1 - " + newskills.Proficiency1);
-            System.Console.WriteLine("[3] Update Secondary Skills - " + newskills.Secondaryskill);
-            System.Console.WriteLine("[4] Update Proficiency 2 - " + newskills.Proficiency2);
-            System.Console.WriteLine("[5] Update Teritiary Skills - " + newskills.Teritiaryskill);
-            System.Console.WriteLine("[6] Update Proficiency 3 - " + newskills.proficiency3);
+            newskills = repo.GetAll(pid);
+            System.Console.WriteLine("-----------------------------------------------------------------------------------------------");
+            System.Console.WriteLine("****************************************** Update Skills **************************************");
+            System.Console.WriteLine("-----------------------------------------------------------------------------------------------\n"); 
+            System.Console.WriteLine("[1] Update primary Skill          - " + newskills.Primaryskill);
+            System.Console.WriteLine("[2] Update Proficiency 1          - " + newskills.Proficiency1);
+            System.Console.WriteLine("[3] Update Secondary Skills       - " + newskills.Secondaryskill);
+            System.Console.WriteLine("[4] Update Proficiency 2          - " + newskills.Proficiency2);
+            System.Console.WriteLine("[5] Update Teritiary Skills       - " + newskills.Teritiaryskill);
+            System.Console.WriteLine("[6] Update Proficiency 3          - " + newskills.proficiency3);
             System.Console.WriteLine("[7] save");
+            System.Console.WriteLine("[8] Go Back");
 
         }
 
@@ -34,8 +37,6 @@ namespace Console
             string userInput = System.Console.ReadLine();
             switch (userInput)
             {
-                case "0":
-                    return "Update";
                 case "1":
                     System.Console.WriteLine("Please enter a Primary Skill!");
                     newskills.Primaryskill  = System.Console.ReadLine();
@@ -115,7 +116,7 @@ namespace Console
                     }
                     return "UpdateSkills";
                 case "7":
-                    try
+                    /*try
                     {
                         Log.Information("Adding record \n" + newskills);
                         repo.Add(newskills);
@@ -127,9 +128,12 @@ namespace Console
                         System.Console.WriteLine(exc.Message);
                         System.Console.WriteLine("Please press Enter to continue");
                         System.Console.ReadLine();
-                    }
-                    System.Console.WriteLine("saved successful");
+                    }*/
+                    System.Console.WriteLine("saved successfully");
+                    System.Console.ReadKey();
                     return "UpdateSkills";
+                case "8":
+                    return "GetSkills";
                 default:
                     System.Console.WriteLine("Please input a valid response");
                     System.Console.WriteLine("Please press Enter to continue");

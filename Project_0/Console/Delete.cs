@@ -12,6 +12,9 @@ namespace Console
         static string constr = File.ReadAllText("../../../../Database/log.txt");
         public void Display()
         {
+            System.Console.WriteLine("-----------------------------------------------------------------------------------------------");
+            System.Console.WriteLine("******************************************* Delete *****************************************");
+            System.Console.WriteLine("-----------------------------------------------------------------------------------------------");
             System.Console.WriteLine("[0] - Back");
             System.Console.WriteLine("[1] - Delete");
         }

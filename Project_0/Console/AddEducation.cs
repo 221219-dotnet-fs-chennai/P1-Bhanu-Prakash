@@ -16,14 +16,17 @@ namespace Console
 
         public void Display()
         {
+            System.Console.WriteLine("-----------------------------------------------------------------------------------------------");
+            System.Console.WriteLine("******************************************* Education *****************************************");
+            System.Console.WriteLine("-----------------------------------------------------------------------------------------------");
             System.Console.WriteLine("Enter Trainer Information");
-            System.Console.WriteLine("[0] Go Back");
-            System.Console.WriteLine("[1] Save");
-            System.Console.WriteLine("[2] HigherEducation - " + neweducation.HigherEducation);
-            System.Console.WriteLine("[3] University - " + neweducation.university);
-            System.Console.WriteLine("[4] StartYear - " + neweducation.Startyear);
-            System.Console.WriteLine("[5] EndYear- " + neweducation.Endyear);
-            System.Console.WriteLine("[6] Grade - " + neweducation.Grade);
+            System.Console.WriteLine("1. HigherEducation         -                    " + neweducation.HigherEducation);
+            System.Console.WriteLine("2. University              -                    " + neweducation.university);
+            System.Console.WriteLine("3. StartYear               -                    " + neweducation.Startyear);
+            System.Console.WriteLine("4. EndYear                 -                    " + neweducation.Endyear);
+            System.Console.WriteLine("5. Grade                   -                    " + neweducation.Grade);
+            System.Console.WriteLine("6. Save");
+            System.Console.WriteLine("7. Go Back");
         }
 
         public string UserChoice()
@@ -31,9 +34,27 @@ namespace Console
             string userInput = System.Console.ReadLine();
             switch (userInput)
             {
-                case "0":
-                    return "Menu";
                 case "1":
+                    System.Console.WriteLine("Please enter Higher Education!");
+                    neweducation.HigherEducation = System.Console.ReadLine();
+                    return "AddEducation";
+                case "2":
+                    System.Console.WriteLine("Please enter University!");
+                    neweducation.university = System.Console.ReadLine();
+                    return "AddEducation";
+                case "3":
+                    System.Console.WriteLine("Please enter Start Year!");
+                    neweducation.Startyear = Convert.ToInt32(System.Console.ReadLine());
+                    return "AddEducation";
+                case "4":
+                    System.Console.WriteLine("Please enter End Year!");
+                    neweducation.Endyear = Convert.ToInt32(System.Console.ReadLine());
+                    return "AddEducation";
+                case "5":
+                    System.Console.WriteLine("Please enter Grade!");
+                    neweducation.Grade = System.Console.ReadLine();
+                    return "AddEducation";
+                case "6":
                     try
                     {
                         Log.Information("Adding record \n" + neweducation);
@@ -49,26 +70,8 @@ namespace Console
                         System.Console.ReadLine();
                     }
                     return "Signup";
-                case "2":
-                    System.Console.WriteLine("Please enter Higher Education!");
-                    neweducation.HigherEducation = System.Console.ReadLine();
-                    return "AddEducation";
-                case "3":
-                    System.Console.WriteLine("Please enter University!");
-                    neweducation.university = System.Console.ReadLine();
-                    return "AddEducation";
-                case "4":
-                    System.Console.WriteLine("Please enter Start Year!");
-                    neweducation.Startyear = Convert.ToInt32(System.Console.ReadLine());
-                    return "AddEducation";
-                case "5":
-                    System.Console.WriteLine("Please enter End Year!");
-                    neweducation.Endyear = Convert.ToInt32(System.Console.ReadLine());
-                    return "AddEducation";
-                case "6":
-                    System.Console.WriteLine("Please enter Grade!");
-                    neweducation.Grade = System.Console.ReadLine();
-                    return "AddEducation";
+                case "7":
+                    return "Signup";
                 default:
                     System.Console.WriteLine("Please input a valid response");
                     System.Console.WriteLine("Please press Enter to continue");

@@ -17,12 +17,15 @@ namespace Console
         int pid = Validate.Pid();
         public void Display()
         {
-            System.Console.WriteLine("Update Experience");
-            System.Console.WriteLine("[0] Go Back");
-            System.Console.WriteLine("[1] Update Previous Company - " + newcompany.PreviousCompany);
-            System.Console.WriteLine("[2] Update Technology - " + newcompany.Technology);
-            System.Console.WriteLine("[3] Update Experience Years - " + newcompany.ExperienceYear);
+            newcompany = repo.GetAll(pid);
+            System.Console.WriteLine("-----------------------------------------------------------------------------------------------");
+            System.Console.WriteLine("****************************************** Update Experience **********************************");
+            System.Console.WriteLine("-----------------------------------------------------------------------------------------------\n");
+            System.Console.WriteLine("[1] Update Previous Company           - " + newcompany.PreviousCompany);
+            System.Console.WriteLine("[2] Update Technology                 - " + newcompany.Technology);
+            System.Console.WriteLine("[3] Update Experience Years           - " + newcompany.ExperienceYear);
             System.Console.WriteLine("[4] save");
+            System.Console.WriteLine("[5] Go Back");
 
         }
 
@@ -31,8 +34,6 @@ namespace Console
             string userInput = System.Console.ReadLine();
             switch (userInput)
             {
-                case "0":
-                    return "Update";
                 case "1":
                     System.Console.WriteLine("Please enter Previous Company!");
                     newcompany.PreviousCompany = System.Console.ReadLine();
@@ -67,13 +68,13 @@ namespace Console
                         connection.Open();
                         using (SqlCommand command = new SqlCommand($"UPDATE Company SET experienceyear = @ExperienceYear where userid = {pid}", connection))
                         {
-                            command.Parameters.AddWithValue("@experienceyear", newcompany.ExperienceYear);
+                            command.Parameters.AddWithValue("@Experienceyear", newcompany.ExperienceYear);
                             command.ExecuteNonQuery();
                         }
                     }
                     return "UpdateCompany";
                 case "4":
-                    try
+                    /*try
                     {
                         Log.Information("Adding record \n" + newcompany);
                         repo.Add(newcompany);
@@ -85,9 +86,12 @@ namespace Console
                         System.Console.WriteLine(exc.Message);
                         System.Console.WriteLine("Please press Enter to continue");
                         System.Console.ReadLine();
-                    }
-                    System.Console.WriteLine("saved successful");
+                    }*/
+                    System.Console.WriteLine("saved successfully");
+                    System.Console.ReadKey();
                     return "UpdateCompany";
+                case "5":
+                    return "GetCompany";
                 default:
                     System.Console.WriteLine("Please input a valid response");
                     System.Console.WriteLine("Please press Enter to continue");

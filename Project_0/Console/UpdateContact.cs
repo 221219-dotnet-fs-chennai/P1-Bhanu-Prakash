@@ -17,13 +17,16 @@ namespace Console
         int pid = Validate.Pid();
         public void Display()
         {
-            System.Console.WriteLine("Update Contact Information");
-            System.Console.WriteLine("[0] Go Back");
-            System.Console.WriteLine("[1] Update Phone - " + newcontact.Phone);
-            System.Console.WriteLine("[2] Update City - " + newcontact.City);
-            System.Console.WriteLine("[3] Update State - " + newcontact.State);
-            System.Console.WriteLine("[4] Update Zipcode - " + newcontact.Zipcode);
+            newcontact = repo.GetAll(pid);
+            System.Console.WriteLine("-----------------------------------------------------------------------------------------------");
+            System.Console.WriteLine("****************************************** Update Contact *************************************");
+            System.Console.WriteLine("-----------------------------------------------------------------------------------------------\n");
+            System.Console.WriteLine("[1] Update Phone               - " + newcontact.Phone);
+            System.Console.WriteLine("[2] Update City                - " + newcontact.City);
+            System.Console.WriteLine("[3] Update State               - " + newcontact.State);
+            System.Console.WriteLine("[4] Update Zipcode             - " + newcontact.Zipcode);
             System.Console.WriteLine("[5] save");
+            System.Console.WriteLine("[6] Go Back");
         }
 
         public string UserChoice()
@@ -31,8 +34,6 @@ namespace Console
             string userInput = System.Console.ReadLine();
             switch (userInput)
             {
-                case "0":
-                    return "Update";
                 case "1":
                     System.Console.WriteLine("Please enter a New Phone Number!");
                     newcontact.Phone = System.Console.ReadLine();
@@ -86,8 +87,11 @@ namespace Console
                     }
                     return "UpdateContact";
                 case "5":
-                    System.Console.WriteLine("saved successful");
+                    System.Console.WriteLine("saved successfully");
+                    System.Console.ReadKey();
                     return "UpdateContact";
+                case "6":
+                    return "GetContact";
                 default:
                     System.Console.WriteLine("Please input a valid response");
                     System.Console.WriteLine("Please press Enter to continue");

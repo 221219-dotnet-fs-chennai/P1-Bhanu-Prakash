@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Security.Cryptography.X509Certificates;
 using System.Runtime.CompilerServices;
 using System.Collections;
+using System.Security;
 
 namespace Console
 {
@@ -17,13 +18,15 @@ namespace Console
 
         public void Display()
         {
-            System.Console.WriteLine("Enter User Details");
+            System.Console.WriteLine("-----------------------------------------------------------------------------------------------");
+            System.Console.WriteLine("********************************************* Validation **************************************");
+            System.Console.WriteLine("-----------------------------------------------------------------------------------------------\n");
             System.Console.WriteLine($"{wrongpswd}");
         }
 
         public string UserChoice()
         {
-            System.Console.Write("Enter Email:");
+            System.Console.Write("Enter Login Email:");
             e = System.Console.ReadLine();
             string path = "../../../../Database/log.txt";
             string cs = File.ReadAllText(path);
@@ -38,8 +41,27 @@ namespace Console
                         if (reader.HasRows)
                         {
                             reader.Close();
-                            System.Console.Write("Enter Password:");
-                            string p = System.Console.ReadLine();
+                            string p = "";
+                            System.Console.Write("Enter Login Password: ");
+                            ConsoleKeyInfo key;
+                            do
+                            {
+                                key = System.Console.ReadKey(true);
+                                if (key.Key != ConsoleKey.Backspace && key.Key != ConsoleKey.Enter)
+                                {
+                                    p += key.KeyChar;
+                                    System.Console.Write("*");
+                                }
+                                else
+                                {
+                                    if (key.Key == ConsoleKey.Backspace && p.Length > 0)
+                                    {
+                                        p = p.Substring(0, (p.Length - 1));
+                                        System.Console.Write("\b \b");
+                                    }
+                                }
+                            }
+                            while (key.Key != ConsoleKey.Enter);
                             SqlCommand cmd = new SqlCommand("SELECT Password from UserDetails where password = @password", connection);
                             cmd.Parameters.AddWithValue("@password", p);
                             SqlDataReader reader1 = cmd.ExecuteReader();
@@ -49,12 +71,14 @@ namespace Console
                             }
                             else
                             {
-                                wrongpswd = "wrong password please retry...";
+                                wrongpswd = "Wrong password please enter your \"Email\" and \"Password\"....!";
                                 return "Validate";
                             }
                         }
                         else
                         {
+                            System.Console.WriteLine("Looks like your Email is not in our Database \nPress Enter To Redirect to Signup Page");
+                            System.Console.ReadKey();
                             return "Signup";
                         }
                     }

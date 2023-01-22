@@ -11,13 +11,16 @@ namespace Console
     {
         public void Display()
         {
-            System.Console.WriteLine("--------Sign Up-----------");
-            System.Console.WriteLine("[0] Go Back");
-            System.Console.WriteLine("[1] Insert User Details");
-            System.Console.WriteLine("[2] Insert Education Details");
-            System.Console.WriteLine("[3] Insert Contact Details");
-            System.Console.WriteLine("[4] Insert Company Details");
-            System.Console.WriteLine("[5] Insert Skills Details");
+            System.Console.WriteLine("-----------------------------------------------------------------------------------------------");
+            System.Console.WriteLine("********************************************** Signup *****************************************");
+            System.Console.WriteLine("-----------------------------------------------------------------------------------------------\n");
+            System.Console.WriteLine("1. Go Back");
+            System.Console.WriteLine("2. Insert User Details");
+            System.Console.WriteLine("3. Insert Education Details");
+            System.Console.WriteLine("4. Insert Contact Details");
+            System.Console.WriteLine("5. Insert Company Details");
+            System.Console.WriteLine("6. Insert Skills Details");
+            System.Console.WriteLine("7. Click to Login");
         }
         public string UserChoice()
         {
@@ -25,18 +28,20 @@ namespace Console
             string input = System.Console.ReadLine();
             switch (input)
             {
-                case "0":
-                    return "Menu";
                 case "1":
-                    return "AddRecord";
+                    return "Menu";
                 case "2":
-                    return "AddEducation";
+                    return "AddRecord";
                 case "3":
-                    return "AddContact";
+                    return "AddEducation";
                 case "4":
-                    return "AddCompany";
+                    return "AddContact";
                 case "5":
+                    return "AddCompany";
+                case "6":
                     return "AddSkills";
+                case "7":
+                    return "Validate";
                 default:
                     System.Console.WriteLine("Please input a valid response");
                     System.Console.WriteLine("Please press Enter to continue");

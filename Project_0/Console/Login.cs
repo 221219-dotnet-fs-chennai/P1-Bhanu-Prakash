@@ -10,15 +10,17 @@ namespace Console
     {
         public void Display()
         {
-            System.Console.WriteLine("------Login-------");
-            System.Console.WriteLine("[0] Go Back to Previous Page");
-            System.Console.WriteLine("[1] User Details");
-            System.Console.WriteLine("[2] Education Details");
-            System.Console.WriteLine("[3] Contact Details");
-            System.Console.WriteLine("[4] Company Details");
-            System.Console.WriteLine("[5] Skills Details");
-            System.Console.WriteLine("[6] View All User Information");
-            System.Console.WriteLine("[7] Delete User");
+            System.Console.WriteLine("-----------------------------------------------------------------------------------------------");
+            System.Console.WriteLine("***************************************** Login Successful ************************************");
+            System.Console.WriteLine("-----------------------------------------------------------------------------------------------\n");
+            System.Console.WriteLine("1. Trainer Details");
+            System.Console.WriteLine("2. Education Details");
+            System.Console.WriteLine("3. Contact Details");
+            System.Console.WriteLine("4. Company Details");
+            System.Console.WriteLine("5. Skills Details");
+            System.Console.WriteLine("6. View All User Information");
+            System.Console.WriteLine("7. Go Back to Main Menu");
+            System.Console.WriteLine("8. Delete User");
 
 
         }
@@ -28,8 +30,6 @@ namespace Console
             string input = System.Console.ReadLine();
             switch (input)
             {
-                case "0":
-                    return "Menu";
                 case "1":
                     return "GetRecord";
                 case "2":
@@ -43,6 +43,8 @@ namespace Console
                 case "6":
                     return "view";
                 case "7":
+                    return "Menu";
+                case "8":
                     return "Delete";
                 default:
                     System.Console.WriteLine("Please input a valid response");

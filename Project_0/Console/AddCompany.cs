@@ -16,12 +16,15 @@ namespace Console
 
         public void Display()
         {
+            System.Console.WriteLine("-----------------------------------------------------------------------------------------------");
+            System.Console.WriteLine("********************************************* Experience **************************************");
+            System.Console.WriteLine("-----------------------------------------------------------------------------------------------");
             System.Console.WriteLine("Enter Experience Information");
-            System.Console.WriteLine("[0] Go Back");
-            System.Console.WriteLine("[1] Save");
-            System.Console.WriteLine("[2] Previous Company - " + newcompany.PreviousCompany);
-            System.Console.WriteLine("[3] Technology - " + newcompany.Technology);
-            System.Console.WriteLine("[4] Experience Years - " + newcompany.ExperienceYear);
+            System.Console.WriteLine("1. Previous Company           -                    " + newcompany.PreviousCompany);
+            System.Console.WriteLine("2. Technology                 -                    " + newcompany.Technology);
+            System.Console.WriteLine("3. Experience Years           -                    " + newcompany.ExperienceYear);
+            System.Console.WriteLine("4. Save");
+            System.Console.WriteLine("5. Go Back");
         }
 
         public string UserChoice()
@@ -29,9 +32,19 @@ namespace Console
             string userInput = System.Console.ReadLine();
             switch (userInput)
             {
-                case "0":
-                    return "Menu";
                 case "1":
+                    System.Console.WriteLine("Please enter Previous Company!");
+                    newcompany.PreviousCompany = System.Console.ReadLine();
+                    return "AddCompany";
+                case "2":
+                    System.Console.WriteLine("Please enter Technology!");
+                    newcompany.Technology = System.Console.ReadLine().ToString();
+                    return "AddCompany";
+                case "3":
+                    System.Console.WriteLine("Please enter Years of Experience!");
+                    newcompany.ExperienceYear = Convert.ToInt32(System.Console.ReadLine());
+                    return "AddCompany";
+                case "4":
                     try
                     {
                         Log.Information("Adding record \n" + newcompany);
@@ -47,18 +60,8 @@ namespace Console
                         System.Console.ReadLine();
                     }
                     return "Signup";
-                case "2":
-                    System.Console.WriteLine("Please enter Previous Company!");
-                    newcompany.PreviousCompany = System.Console.ReadLine();
-                    return "AddCompany";
-                case "3":
-                    System.Console.WriteLine("Please enter Technology!");
-                    newcompany.Technology = System.Console.ReadLine().ToString();
-                    return "AddCompany";
-                case "4":
-                    System.Console.WriteLine("Please enter Years of Experience!");
-                    newcompany.ExperienceYear = Convert.ToInt32(System.Console.ReadLine());
-                    return "AddCompany";
+                case "5":
+                    return "Signup";
                 default:
                     System.Console.WriteLine("Please input a valid response");
                     System.Console.WriteLine("Please press Enter to continue");

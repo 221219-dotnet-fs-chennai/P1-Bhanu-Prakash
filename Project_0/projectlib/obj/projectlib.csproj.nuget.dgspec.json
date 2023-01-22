@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\.net\\Project_0\\projectlib\\projectlib.csproj": {}
+    "D:\\.net\\P1-Bhanu-Prakash\\Project_0\\projectlib\\projectlib.csproj": {}
   },
   "projects": {
-    "D:\\.net\\Project_0\\projectlib\\projectlib.csproj": {
+    "D:\\.net\\P1-Bhanu-Prakash\\Project_0\\projectlib\\projectlib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\.net\\Project_0\\projectlib\\projectlib.csproj",
+        "projectUniqueName": "D:\\.net\\P1-Bhanu-Prakash\\Project_0\\projectlib\\projectlib.csproj",
         "projectName": "projectlib",
-        "projectPath": "D:\\.net\\Project_0\\projectlib\\projectlib.csproj",
+        "projectPath": "D:\\.net\\P1-Bhanu-Prakash\\Project_0\\projectlib\\projectlib.csproj",
         "packagesPath": "C:\\Users\\Bhanu\\.nuget\\packages\\",
-        "outputPath": "D:\\.net\\Project_0\\projectlib\\obj\\",
+        "outputPath": "D:\\.net\\P1-Bhanu-Prakash\\Project_0\\projectlib\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Bhanu\\AppData\\Roaming\\NuGet\\NuGet.Config",
