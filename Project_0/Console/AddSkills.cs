@@ -64,8 +64,8 @@ namespace Console
                     {
                         Log.Information("Adding record \n" + newskills);
                         newskills.Userid = AddRecord.Pid();
-                        System.Console.WriteLine(newskills.Userid);
-                        System.Console.ReadKey();
+                        /*System.Console.WriteLine(newskills.Userid);
+                        System.Console.ReadKey();*/
                         repo.Add(newskills);
                         Log.Information("Successful at adding Record!");
                     }

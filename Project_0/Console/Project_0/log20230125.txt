@@ -1,0 +1,148 @@
+2023-01-25 00:09:04.984 +05:30 [INF] displaying Validation to the user
+2023-01-25 00:09:20.531 +05:30 [INF] Access Login to the user
+2023-01-25 00:09:25.052 +05:30 [INF] displaying all user Information
+2023-01-25 00:09:31.795 +05:30 [INF] Access Login to the user
+2023-01-25 00:09:35.909 +05:30 [INF] displaying Menu to the user
+2023-01-25 12:04:07.353 +05:30 [INF] creating signup to the user
+2023-01-25 12:04:09.183 +05:30 [INF] displaying Menu to the user
+2023-01-25 12:04:11.815 +05:30 [INF] creating signup to the user
+2023-01-25 12:04:12.890 +05:30 [INF] Displaying Add record menu to data
+2023-01-25 12:04:16.366 +05:30 [INF] Displaying Add record menu to data
+2023-01-25 12:04:18.698 +05:30 [INF] Displaying Add record menu to data
+2023-01-25 12:04:25.258 +05:30 [INF] Displaying Add record menu to data
+2023-01-25 12:04:33.110 +05:30 [INF] Displaying Add record menu to data
+2023-01-25 12:04:45.153 +05:30 [INF] Displaying Add record menu to data
+2023-01-25 12:04:52.798 +05:30 [INF] Displaying Add record menu to data
+2023-01-25 12:04:58.674 +05:30 [INF] Displaying Add record menu to data
+2023-01-25 12:05:03.301 +05:30 [INF] Displaying Add record menu to data
+2023-01-25 12:05:05.693 +05:30 [INF] Displaying Add record menu to data
+2023-01-25 12:05:09.141 +05:30 [INF] Displaying Add record menu to data
+2023-01-25 12:05:10.616 +05:30 [INF] Adding record 
+*User-Id                                  -               0
+*FirstName                                -               kl
+*LastName                                 -               lk
+*Email                                    -               kl@gmail.com 
+*Gender                                   -               m 
+*Age                                      -               12
+2023-01-25 12:05:11.122 +05:30 [INF] Successful at adding Record!
+2023-01-25 12:05:11.122 +05:30 [INF] creating signup to the user
+2023-01-25 12:05:12.786 +05:30 [INF] Adding Education details to the user
+2023-01-25 12:05:16.467 +05:30 [INF] Adding Education details to the user
+2023-01-25 12:05:20.166 +05:30 [INF] Adding Education details to the user
+2023-01-25 12:05:23.004 +05:30 [INF] Adding Education details to the user
+2023-01-25 12:05:25.670 +05:30 [INF] Adding Education details to the user
+2023-01-25 12:05:29.869 +05:30 [INF] Adding Education details to the user
+2023-01-25 12:05:31.567 +05:30 [INF] Adding record 
+*Higher Education                         -               kl 
+*University                               -               kl 
+*Start Year                               -               18 
+*End Year                                 -               12 
+*Grade                                    -               L
+2023-01-25 12:05:31.767 +05:30 [INF] Successful at adding Record!
+2023-01-25 12:05:31.767 +05:30 [INF] creating signup to the user
+2023-01-25 12:05:35.407 +05:30 [INF] Adding Company Details
+2023-01-25 12:05:45.138 +05:30 [INF] Adding Company Details
+2023-01-25 12:05:48.123 +05:30 [INF] Adding Company Details
+2023-01-25 12:05:49.641 +05:30 [INF] Adding record 
+*Previous Company                          -              re 
+*Technology                                -              it 
+*Experience in Years                       -              0
+2023-01-25 12:05:49.740 +05:30 [INF] Successful at adding Record!
+2023-01-25 12:05:49.740 +05:30 [INF] creating signup to the user
+2023-01-25 12:05:52.670 +05:30 [INF] Adding Company Details
+2023-01-25 12:05:58.546 +05:30 [INF] Adding Company Details
+2023-01-25 12:06:00.109 +05:30 [INF] Adding record 
+*Previous Company                          -              re 
+*Technology                                -              it 
+*Experience in Years                       -              34
+2023-01-25 12:06:00.150 +05:30 [INF] Successful at adding Record!
+2023-01-25 12:06:00.150 +05:30 [INF] creating signup to the user
+2023-01-25 12:06:03.361 +05:30 [INF] Adding Company Details
+2023-01-25 12:06:05.068 +05:30 [INF] Adding record 
+*Previous Company                          -              re 
+*Technology                                -              it 
+*Experience in Years                       -              34
+2023-01-25 12:06:05.103 +05:30 [INF] Successful at adding Record!
+2023-01-25 12:06:05.103 +05:30 [INF] creating signup to the user
+2023-01-25 12:06:06.802 +05:30 [INF] Adding contact details
+2023-01-25 12:06:12.938 +05:30 [INF] Adding contact details
+2023-01-25 12:06:17.714 +05:30 [INF] Adding contact details
+2023-01-25 12:06:20.466 +05:30 [INF] Adding contact details
+2023-01-25 12:06:22.363 +05:30 [INF] Adding contact details
+2023-01-25 12:06:26.382 +05:30 [INF] Adding contact details
+2023-01-25 12:06:32.493 +05:30 [INF] Adding contact details
+2023-01-25 12:06:35.738 +05:30 [INF] Adding contact details
+2023-01-25 12:06:37.409 +05:30 [INF] Adding record 
+*Phone Number                             -               8908908900 
+*City                                     -               kl 
+*State                                    -               zp
+*ZipCode                                  -               890890
+2023-01-25 12:06:37.452 +05:30 [INF] Successful at adding Record!
+2023-01-25 12:06:37.452 +05:30 [INF] creating signup to the user
+2023-01-25 12:06:40.269 +05:30 [INF] Adding skills
+2023-01-25 12:06:42.807 +05:30 [INF] Adding skills
+2023-01-25 12:06:46.887 +05:30 [INF] Adding skills
+2023-01-25 12:06:48.738 +05:30 [INF] Adding skills
+2023-01-25 12:06:50.397 +05:30 [INF] Adding skills
+2023-01-25 12:06:54.445 +05:30 [INF] Adding skills
+2023-01-25 12:06:56.493 +05:30 [INF] Adding skills
+2023-01-25 12:06:58.463 +05:30 [INF] Adding skills
+2023-01-25 12:06:59.621 +05:30 [INF] Adding record 
+*Primary Skill                            -               k 
+*Primary Skill Proficienct                -               l
+*Secondary Skill Proficiency              -               k 
+*Secondary Skill Proficiency              -               l 
+*Teritiary Skill                          -               o 
+*Teritiary Skill Proficiency              -               l
+2023-01-25 12:06:59.665 +05:30 [INF] Successful at adding Record!
+2023-01-25 12:06:59.665 +05:30 [INF] creating signup to the user
+2023-01-25 12:07:02.574 +05:30 [INF] displaying Validation to the user
+2023-01-25 12:07:11.770 +05:30 [INF] Access Login to the user
+2023-01-25 12:07:15.111 +05:30 [INF] displaying all user Information
+2023-01-25 12:07:18.316 +05:30 [INF] Access Login to the user
+2023-01-25 12:07:20.846 +05:30 [INF] Getting details of the user
+2023-01-25 12:07:22.935 +05:30 [INF] Getting all Records
+2023-01-25 12:07:22.936 +05:30 [INF] Reading records ends
+2023-01-25 12:07:23.950 +05:30 [INF] Getting details of the user
+2023-01-25 12:07:25.089 +05:30 [INF] Updation of the user details
+2023-01-25 12:07:33.420 +05:30 [INF] Updation of the user details
+2023-01-25 12:07:36.750 +05:30 [INF] Updation of the user details
+2023-01-25 12:07:40.456 +05:30 [INF] Getting details of the user
+2023-01-25 12:07:43.565 +05:30 [INF] Updation of the user details
+2023-01-25 12:07:54.371 +05:30 [INF] Getting details of the user
+2023-01-25 12:07:56.391 +05:30 [INF] Getting all Records
+2023-01-25 12:07:56.392 +05:30 [INF] Reading records ends
+2023-01-25 12:07:57.805 +05:30 [INF] Getting details of the user
+2023-01-25 12:08:14.753 +05:30 [INF] Access Login to the user
+2023-01-25 12:08:19.503 +05:30 [INF] Retreiving Education Details
+2023-01-25 12:08:20.721 +05:30 [INF] Getting all Records
+2023-01-25 12:08:20.724 +05:30 [INF] Reading records ends
+2023-01-25 12:08:26.940 +05:30 [INF] Retreiving Education Details
+2023-01-25 12:08:29.073 +05:30 [INF] Updating Educating Details
+2023-01-25 12:08:32.516 +05:30 [INF] Updating Educating Details
+2023-01-25 12:08:34.930 +05:30 [INF] Updating Educating Details
+2023-01-25 12:08:37.008 +05:30 [INF] Retreiving Education Details
+2023-01-25 12:08:43.935 +05:30 [INF] Retreiving Education Details
+2023-01-25 12:08:45.095 +05:30 [INF] Getting all Records
+2023-01-25 12:08:45.096 +05:30 [INF] Reading records ends
+2023-01-25 12:08:48.266 +05:30 [INF] Retreiving Education Details
+2023-01-25 12:08:49.831 +05:30 [INF] Access Login to the user
+2023-01-25 12:08:51.435 +05:30 [INF] displaying all user Information
+2023-01-25 12:08:58.161 +05:30 [INF] Access Login to the user
+2023-01-25 12:09:03.637 +05:30 [INF] Retreiving company Details
+2023-01-25 12:09:06.593 +05:30 [INF] Retreiving company Details
+2023-01-25 12:09:08.731 +05:30 [INF] Access Login to the user
+2023-01-25 12:09:10.384 +05:30 [INF] Retreiving the skills
+2023-01-25 12:09:12.731 +05:30 [INF] Retreiving the skills
+2023-01-25 12:09:14.383 +05:30 [INF] Access Login to the user
+2023-01-25 12:09:19.888 +05:30 [INF] displaying all user Information
+2023-01-25 12:09:28.492 +05:30 [INF] Access Login to the user
+2023-01-25 12:09:37.594 +05:30 [INF] Retreiving the contact details
+2023-01-25 12:09:40.949 +05:30 [INF] Retreiving the contact details
+2023-01-25 12:09:42.031 +05:30 [INF] Access Login to the user
+2023-01-25 12:09:45.140 +05:30 [INF] displaying all user Information
+2023-01-25 12:09:55.473 +05:30 [INF] Access Login to the user
+2023-01-25 12:10:01.426 +05:30 [INF] Deleting the user
+2023-01-25 12:10:03.221 +05:30 [INF] displaying Menu to the user
+2023-01-25 12:10:06.142 +05:30 [INF] displaying Validation to the user
+2023-01-25 12:10:14.427 +05:30 [INF] creating signup to the user
