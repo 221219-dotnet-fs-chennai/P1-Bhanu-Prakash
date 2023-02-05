@@ -1,1 +1,1 @@
-Server=MSI;Database=Project;Trusted_Connection=True;
+Server=MSI;Database=Project;Trusted_Connection=True;Encrypt=false;
