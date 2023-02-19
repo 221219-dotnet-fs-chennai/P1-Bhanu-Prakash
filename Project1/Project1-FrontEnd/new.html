@@ -1,0 +1,80 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Login.css">
+    <style>
+                ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgba(27, 29, 103, 0.582);
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 50px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: rgba(222, 223, 234, 0.582);
+        }
+
+        .active {
+            background-color: #020a07;
+        }
+
+        li {
+            border-right: 1px solid #bbb;
+        }
+
+        li:last-child {
+            border-right: none;
+        }
+    </style>
+    <title>SignUp</title>
+</head>
+
+<body >
+
+    <ul class="top">
+        <li style="float:right"><a href="Login.html">Back to Login</a></li>
+    </ul>
+    <form class="form">
+        <center>
+        <div class ="header">
+            <h1>Register</h1>
+        </div>
+    </center>
+        <div>
+            <input id="Email" type="text" style="margin-left: 75px;" placeholder="Enter email" required>
+            <input id="Password" type="password"  style="margin-left: 75px;" placeholder="Enter Password" required="">
+        </div>
+        <button type="submit" style="margin-left: 75px;">Sign Up</button>
+    </form>
+
+    <script>
+        const Loginform = document.querySelector('.form');
+        console.log(Loginform);
+        Loginform.addEventListener('submit', e=>{
+            e.preventDefault();
+            var email = document.getElementById('Email').value;
+                    window.location.replace("Registration.html");
+                    localStorage.setItem("email", email);
+                    console.log(email)
+        })
+    </script>
+
+</body>
+
+</html>

@@ -13,8 +13,8 @@ namespace Service.Controllers
             _logic = logic;
         }
 
-        [HttpGet("FetchEducation/{email}")]
-        public IActionResult Get([FromRoute] string email)
+        [HttpGet("FetchEducationDetails")]
+        public IActionResult Get([FromQuery] string email)
         {
             try
             {
@@ -54,8 +54,8 @@ namespace Service.Controllers
             }
         }
 
-        [HttpPost("AddEducation/{email}")]
-        public IActionResult Add([FromRoute] string email, [FromBody] Models.Education ed)
+        [HttpPost("AddEducation")]
+        public IActionResult Add([FromQuery] string email, [FromBody] Models.Education ed)
         {
             try
             {
@@ -69,11 +69,11 @@ namespace Service.Controllers
         }
 
         [HttpDelete("Delete")]
-        public IActionResult Delete([FromHeader] string email)
+        public IActionResult Delete([FromQuery] string email,string degree)
         {
             try
             {
-                var ed = _logic.Remove(email);
+                var ed = _logic.Remove(email,degree);
                 if (ed != null)
                 {
                     return Ok(ed);
@@ -89,19 +89,19 @@ namespace Service.Controllers
             }
         }
 
-        [HttpPut("Update/{email}")]
-        public IActionResult Update([FromRoute] string email,[FromBody] Models.Education ed)
+        [HttpPut("Update")]
+        public IActionResult Update([FromQuery] string email,string degree,[FromBody] Models.Education ed)
         {
             try
             {
                 if (!string.IsNullOrEmpty(email))
                 {
-                    _logic.UpdateEd(email,ed);
+                    _logic.UpdateEd(email,degree,ed);
                     return Ok(ed);
                 }
                 else
                 {
-                    return NotFound();
+                    return NotFound("No Details found");
                 }
             }
             catch (Exception ex)

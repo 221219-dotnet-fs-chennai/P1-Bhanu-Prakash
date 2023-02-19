@@ -13,8 +13,8 @@ namespace Service.Controllers
         {
             _logic = logic;
         }
-        [HttpGet("FetchSkills/{email}")]
-        public IActionResult Get([FromRoute] string email)
+        [HttpGet("FetchSkillsDetails")]
+        public IActionResult Get([FromQuery] string email)
         {
             try
             {
@@ -54,8 +54,8 @@ namespace Service.Controllers
             }
         }
 
-        [HttpPost("AddSkills/{email}")]
-        public IActionResult Add([FromRoute] string email,[FromBody] Models.Skills skills)
+        [HttpPost("AddSkills")]
+        public IActionResult Add([FromQuery] string email,[FromBody] Models.Skills skills)
         {
             try
             {
@@ -69,7 +69,7 @@ namespace Service.Controllers
         }
 
         [HttpDelete("Delete")]
-        public IActionResult Delete([FromHeader] string email,string name)
+        public IActionResult Delete([FromQuery] string email,string name)
         {
             try
             {
@@ -89,8 +89,8 @@ namespace Service.Controllers
             }
         }
 
-        [HttpPut("Update/{email}")]
-        public IActionResult Update([FromRoute] string email, string oldskill, [FromBody] Models.Skills skill)
+        [HttpPut("Update")]
+        public IActionResult Update([FromQuery] string email, string oldskill, [FromBody] Models.Skills skill)
         {
             try
             {

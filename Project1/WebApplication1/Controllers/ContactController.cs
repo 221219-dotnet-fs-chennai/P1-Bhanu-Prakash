@@ -13,8 +13,8 @@ namespace Service.Controllers
             _logic = logic;
         }
 
-        [HttpGet("FetchContact/{email}")]
-        public IActionResult Get([FromRoute] string email)
+        [HttpGet("FetchContactDetails")]
+        public IActionResult Get([FromQuery] string email)
         {
             try
             {
@@ -54,8 +54,8 @@ namespace Service.Controllers
             }
         }
 
-        [HttpPost("AddContact/{email}")]
-        public IActionResult Add([FromRoute] string email, [FromBody] Models.Contact ed)
+        [HttpPost("AddContact")]
+        public IActionResult Add([FromQuery] string email, [FromBody] Models.Contact ed)
         {
             try
             {
@@ -64,12 +64,12 @@ namespace Service.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.InnerException.Message);
+                return BadRequest(ex.Message);
             }
         }
 
         [HttpDelete("Delete")]
-        public IActionResult Delete([FromHeader] string email)
+        public IActionResult Delete([FromQuery] string email)
         {
             try
             {
@@ -89,8 +89,8 @@ namespace Service.Controllers
             }
         }
 
-        [HttpPut("Update/{email}")]
-        public IActionResult Update([FromRoute] string email, [FromBody] Models.Contact ed)
+        [HttpPut("Update")]
+        public IActionResult Update([FromQuery] string email, [FromBody] Models.Contact ed)
         {
             try
             {

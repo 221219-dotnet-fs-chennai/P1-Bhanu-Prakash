@@ -16,9 +16,9 @@ namespace DataFluentAPI
             return ed;
         }
 
-        public Education Delete(int id)
+        public Education Delete(int id,string degree)
         {
-            var _id=_context.Educations.Where(i => i.UserId == id).FirstOrDefault();
+            var _id=_context.Educations.Where(i => i.UserId == id && i.HigherEducation==degree).FirstOrDefault();
             _context.Remove(_id);
             _context.SaveChanges();
             return _id;

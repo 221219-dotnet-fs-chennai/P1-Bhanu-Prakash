@@ -1,0 +1,89 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Login.css">
+    <script src="AddExp.js"></script>
+
+
+    <style>
+        body {
+            margin: 10;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgba(27, 29, 103, 0.582);
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 50px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: rgba(222, 223, 234, 0.582);
+        }
+
+        .active {
+            background-color: #020a07;
+        }
+
+        li {
+            border-right: 1px solid #bbb;
+        }
+
+        li:last-child {
+            border-right: none;
+        }
+
+
+
+        .round {
+            border-radius: 15%;
+        }
+    </style>
+    <title>Add Skill</title>
+</head>
+
+<body>
+
+    <ul class="top">
+
+        <li><a class="active" href="Company.html">Experience</a></li>
+        <li style="float:right"><a href="view.html">Back</a></li>
+
+    </ul>
+    <form id="addExperience">
+
+        <form class="form">
+            <center>
+                <center>
+                    <div class="header">
+                        <h1>Experience</h1>
+                        <h3 style="margin-left: 5px;">Enter Trainer Details</h3>
+                    </div>
+                </center>
+                <div>
+                    <input id="prev" type="text" style="margin-left: 75px;" placeholder="Enter Previous Company" required>
+                    <input id="tech" type="text" style="margin-left: 75px;" placeholder="Enter Technology" required>
+                    <input id="years" type="text" style="margin-left: 75px;" placeholder="Experience in Years" required>
+                    <button type="submit" onclick="addExperience()" style="margin-left: 75px;">Submit</button>
+                </div>
+        </form>
+    </form>
+</body>
+
+</html>

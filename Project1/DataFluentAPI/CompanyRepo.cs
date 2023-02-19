@@ -16,9 +16,9 @@ namespace DataFluentAPI
             return ed;
         }
 
-        public Company Delete(int id)
+        public Company Delete(int id, string prev)
         {
-            var _id = _context.Companies.Where(i => i.UserId == id).FirstOrDefault();
+            var _id = _context.Companies.Where(i => i.UserId == id && i.PreviousCompany==prev).FirstOrDefault();
             _context.Remove(_id);
             _context.SaveChanges();
             return _id;

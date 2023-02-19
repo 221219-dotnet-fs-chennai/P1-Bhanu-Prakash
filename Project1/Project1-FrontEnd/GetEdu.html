@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Login.css">
+    <title>View Education</title>
+    <style>
+        body {
+            margin: 10;
+            height: 100%;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgba(27, 29, 103, 0.582);
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 50px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: rgba(222, 223, 234, 0.582);
+        }
+
+        .active {
+            background-color: #020a07;
+        }
+
+        li {
+            border-right: 1px solid #bbb;
+        }
+
+        li:last-child {
+            border-right: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class="top">
+        <li style="float:right"><a href="view.html">Back</a></li>
+      </ul>
+
+    <form class="form">
+        <center>
+            <div class="header">
+                <h1>Education</h1>
+                <hr>
+            </div>
+        <div id="showUserDetail"></div>
+        <script src="GetEdu.js"></script>
+    </center>
+    </form>
+</body>
+
+</html>

@@ -1,4 +1,5 @@
 using DF=DataFluentAPI.Entities;
+using df = DataFluentAPI.View;
 using Microsoft.EntityFrameworkCore;
 using BusinessLogic;
 using DataFluentAPI.Entities;
@@ -17,6 +18,7 @@ builder.Services.AddSwaggerGen();
 
 var obj = builder.Configuration.GetConnectionString("ConnectionString");
 builder.Services.AddDbContext<DF.ProjectContext>(options => options.UseSqlServer(obj));
+builder.Services.AddDbContext<df.ProjectContext>(options => options.UseSqlServer(obj));
 builder.Services.AddScoped<Validate>();
 
 builder.Services.AddScoped<IRepo<DF.UserDetails>, DF.SQLRepo>();
@@ -34,6 +36,18 @@ builder.Services.AddScoped<IContactLogic, ContactLogic>();
 builder.Services.AddScoped<ICompanyRepo, CompanyRepo>();
 builder.Services.AddScoped<ICompanyLogic, CompanyLogic>();
 
+builder.Services.AddScoped<IAgeFilter, AgeFilterRepo>();
+builder.Services.AddScoped<IAgeLogic, AgeFilterLogic>();
+
+
+//var cors = "cors";
+//builder.Services.AddCors(options =>
+//    options.AddPolicy(cors, policy => { policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod(); }));
+
+builder.Services.AddCors(p => p.AddPolicy("cors", build =>
+{
+    build.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
+}));
 
 JsonSerializerOptions options = new()
 {
@@ -50,6 +64,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("cors");
 
 app.UseHttpsRedirection();
 

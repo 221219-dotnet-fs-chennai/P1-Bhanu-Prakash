@@ -34,29 +34,29 @@ namespace BusinessLogic
             return Mapper.Map(_edrepo.Get(id));
         }
 
-        public Models.Education Remove(string email)
+        public Models.Education Remove(string email, string degree)
         {
             int id = _id.Pid(email);
-            return Mapper.Map(_edrepo.Delete(id));
+            return Mapper.Map(_edrepo.Delete(id,degree));
         }
 
-        public Education UpdateEd(string email,Models.Education user)
+        public Education UpdateEd(string email,string degree, Models.Education user)
         {
             int id = _id.Pid(email);
-            var sk = _context.Educations.Where(item => item.UserId == id).First();
+            var sk = _context.Educations.Where(item => item.UserId == id && item.HigherEducation == degree).First();
             if(sk != null)
             {
                 sk.UserId = sk.UserId;
                 sk.EdId= sk.EdId;
-                if (sk.HigherEducation.IsNullOrEmpty() && sk.HigherEducation != null) sk.HigherEducation = sk.HigherEducation;
-                else sk.HigherEducation = user.HigherEducation;
-                if (sk.University.IsNullOrEmpty() && sk.University != null) sk.University = sk.University;
+                if (user.Degree.IsNullOrEmpty() && sk.HigherEducation != null) sk.HigherEducation = sk.HigherEducation;
+                else sk.HigherEducation = user.Degree;
+                if (user.University.IsNullOrEmpty() && sk.University != null) sk.University = sk.University;
                 else sk.University = user.University;
-                if (sk.Startyear.ToString().IsNullOrEmpty() && sk.Startyear != null) sk.Startyear = sk.Startyear;
+                if (user.Startyear.ToString().IsNullOrEmpty() && sk.Startyear != null) sk.Startyear = sk.Startyear;
                 else sk.Startyear = user.Startyear;
-                if (sk.Endyear.ToString().IsNullOrEmpty() && sk.Endyear != null) sk.Endyear = sk.Endyear;
+                if (user.Endyear.ToString().IsNullOrEmpty() && sk.Endyear != null) sk.Endyear = sk.Endyear;
                 else sk.Endyear = user.Endyear;
-                if (sk.Grade.IsNullOrEmpty() && sk.Grade != null) sk.Grade = sk.Grade;
+                if (user.Grade.IsNullOrEmpty() && sk.Grade != null) sk.Grade = sk.Grade;
                 else sk.Grade = user.Grade;
             }
             return _edrepo.UpdateEd(sk);

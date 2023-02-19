@@ -1,4 +1,7 @@
 ﻿using DataFluentAPI.Entities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+
 namespace BusinessLogic
 {
     public class Logic : ILogic
@@ -21,11 +24,11 @@ namespace BusinessLogic
         }
         public IEnumerable<Models.UserDetails> GetUserDetails()
         {
-            return Mapper.Map(_repo.GetAll());
+            return Mapper.Map((_repo.GetAll()));
         }
         public Models.UserDetails Get(string email)
         {
-            return Mapper.Map(_repo.Get(email));
+            return Mapper.Map((_repo.Get(email)));
         }
 
         public Models.UserDetails Remove(string email, string password)
@@ -43,15 +46,26 @@ namespace BusinessLogic
                         select e).FirstOrDefault();
             if (mail != null)
             {
-                mail.Firstname = user.Firstname;
-                mail.Lastname = user.Lastname;
+                if (user.Firstname.IsNullOrEmpty() && mail.Firstname != null) mail.Firstname = mail.Firstname;
+                else mail.Firstname = user.Firstname;
+                if (user.Lastname.IsNullOrEmpty() && mail.Lastname != null) mail.Lastname = mail.Lastname;
+                else mail.Lastname = user.Lastname;
                 mail.Email = email;
-                mail.Password = user.Password;
-                mail.Gender = user.Gender;
-                mail.Age = user.Age;
+                if (user.Password.IsNullOrEmpty() && mail.Password != null) mail.Password = mail.Password;
+                else mail.Password = user.Password;
+                if (user.Gender.IsNullOrEmpty() && mail.Gender != null) mail.Gender = mail.Gender;
+                else mail.Gender = user.Gender;
+                if (user.Age.ToString().IsNullOrEmpty() && mail.Age != null) mail.Age = mail.Age;
+                else mail.Age = user.Age;
                 mail = _repo.Update(mail);
             }
             return Mapper.Map(mail);
-        } 
+        }
+
+        /*public Models.UserDetails Filter(int age)
+        {
+            var 
+
+        }*/
     }
 }

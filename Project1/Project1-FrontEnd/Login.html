@@ -1,0 +1,61 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Login.css">
+    <title>Login</title>
+</head>
+
+<body >
+    <form class="form">
+        <center>
+        <div class ="header">
+            <h1>Trainer Login</h1>
+        </div>
+    </center>
+        <div>
+            <input id="Email" type="text" style="margin-left: 75px;" placeholder="Enter email" name="Email" required>
+            <input id="Password" type="password"  style="margin-left: 75px;" placeholder="Enter Password" name="Password" required="">
+        </div>
+        <button type="submit" style="margin-left: 75px;">Login</button>
+        <p class="register" style="margin-left: 75px;">Not a member?  <a href="new.html">Register here!</a></p>
+    </form>
+
+    <script>
+        const Loginform = document.querySelector('.form');
+        console.log(Loginform);
+        Loginform.addEventListener('submit', e=>{
+            e.preventDefault();
+            var email = document.getElementById('Email').value;
+            var pswd = document.getElementById('Password').value;
+
+            fetch(`https://localhost:7026/api/User/Validate?email=${email}&pswd=${pswd}`,{
+                method:'GET',
+                headers:{
+                    'Content-Type':'application/json',
+                    'email' : email,
+                    'password' : pswd
+                }
+            })
+            .then((response) => 
+            {
+                if(response.status === 200)
+                {
+                    alert('Login Successful');
+                    window.location.replace("view.html");
+                    localStorage.setItem("email", email);
+                }
+                else
+                {
+                    alert('Login Failed');
+                }
+        })
+            .catch(error => console.log(error));
+        });
+    </script>
+
+</body>
+
+</html>

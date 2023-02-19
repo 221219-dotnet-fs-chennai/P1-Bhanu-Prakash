@@ -9,7 +9,7 @@ namespace DataFluentAPI
 
         List<Company> GetAll();
 
-        Company Delete(int t);
+        Company Delete(int t,string prev);
 
         Company UpdateEd(Company t);
 

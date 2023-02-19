@@ -34,25 +34,25 @@ namespace BusinessLogic
             return Mapper.Map(_edrepo.Get(id));
         }
 
-        public Models.Company Remove(string email)
+        public Models.Company Remove(string email, string prev)
         {
             int id = _id.Pid(email);
-            return Mapper.Map(_edrepo.Delete(id));
+            return Mapper.Map(_edrepo.Delete(id,prev));
         }
 
-        public Company UpdateEd(string email, Models.Company user)
+        public Company UpdateEd(string email, string prev, Models.Company user)
         {
             int id = _id.Pid(email);
-            var sk = _context.Companies.Where(item => item.UserId == id).First();
+            var sk = _context.Companies.Where(item => item.UserId == id && item.PreviousCompany == prev).First();
             if (sk != null)
             {
                 sk.UserId = sk.UserId;
                 sk.CmpId= sk.CmpId;
-                if (sk.PreviousCompany.IsNullOrEmpty() && sk.PreviousCompany != null) sk.PreviousCompany = sk.PreviousCompany;
+                if (user.PreviousCompany.IsNullOrEmpty() && sk.PreviousCompany != null) sk.PreviousCompany = sk.PreviousCompany;
                 else sk.PreviousCompany = user.PreviousCompany;
-                if (sk.Technology.IsNullOrEmpty() && sk.Technology != null) sk.Technology = sk.Technology;
+                if (user.Technology.IsNullOrEmpty() && sk.Technology != null) sk.Technology = sk.Technology;
                 else sk.Technology = user.Technology;
-                if (sk.Experienceyear.ToString().IsNullOrEmpty() && sk.Experienceyear != null) sk.Experienceyear = sk.Experienceyear;
+                if (user.Experienceyear.ToString().IsNullOrEmpty() && sk.Experienceyear != null) sk.Experienceyear = sk.Experienceyear;
                 else sk.Experienceyear = user.Experienceyear;
             }
             return _edrepo.UpdateEd(sk);

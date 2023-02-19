@@ -30,13 +30,13 @@ namespace BusinessLogic
 
         public IEnumerable<Models.Contact> GetContacts()
         {
-            return Mapper.Map(_edrepo.GetAll());
+            return Mapper.Map((_edrepo.GetAll()));
         }
 
         public IEnumerable<Models.Contact> Get(string email)
         {
             int id = _id.Pid(email);
-            return Mapper.Map(_edrepo.Get(id));
+            return Mapper.Map((_edrepo.Get(id)));
         }
 
         public Models.Contact Remove(string email)
@@ -53,13 +53,13 @@ namespace BusinessLogic
             {
                 sk.UserId = sk.UserId;
                 sk.ContactId= sk.ContactId;
-                if (sk.City.IsNullOrEmpty() && sk.City != null) sk.City = sk.City;
+                if (user.City.IsNullOrEmpty() && sk.City != null) sk.City = sk.City;
                 else sk.City = user.City;
-                if (sk.Phone.IsNullOrEmpty() && sk.Phone != null) sk.Phone = sk.Phone;
+                if (user.Phone.IsNullOrEmpty() && sk.Phone != null) sk.Phone = sk.Phone;
                 else sk.Phone = user.Phone;
-                if (sk.State.ToString().IsNullOrEmpty() && sk.State != null) sk.State = sk.State;
+                if (user.State.ToString().IsNullOrEmpty() && sk.State != null) sk.State = sk.State;
                 else sk.State = user.State;
-                if (sk.Zipcode.ToString().IsNullOrEmpty() && sk.Zipcode != null) sk.Zipcode = sk.Zipcode;
+                if (user.Zipcode.ToString().IsNullOrEmpty() && sk.Zipcode != null) sk.Zipcode = sk.Zipcode;
                 else sk.Zipcode = user.Zipcode;
             }
             return _edrepo.UpdateEd(sk);

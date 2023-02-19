@@ -10,8 +10,8 @@ namespace BusinessLogic
 
         IEnumerable<Models.Company> Get(string email);
 
-        Models.Company Remove(string email);
+        Models.Company Remove(string email,string prev);
 
-        df.Company UpdateEd(string email, Models.Company user);
+        df.Company UpdateEd(string email,string prev, Models.Company user);
     }
 }

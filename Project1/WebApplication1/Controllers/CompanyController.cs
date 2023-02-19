@@ -14,8 +14,8 @@ namespace Service.Controllers
                 _logic = logic;
         }
 
-        [HttpGet("FetchCompany/{email}")]
-        public IActionResult Get([FromRoute] string email)
+        [HttpGet("FetchCompanyDetails")]
+        public IActionResult Get([FromQuery] string email)
         {
             try
             {
@@ -55,8 +55,8 @@ namespace Service.Controllers
             }
         }
 
-        [HttpPost("AddCompany/{email}")]
-        public IActionResult Add([FromRoute] string email, [FromBody] Models.Company ed)
+        [HttpPost("AddCompany")]
+        public IActionResult Add([FromQuery] string email, [FromBody] Models.Company ed)
         {
             try
             {
@@ -70,11 +70,11 @@ namespace Service.Controllers
         }
 
         [HttpDelete("Delete")]
-        public IActionResult Delete([FromHeader] string email)
+        public IActionResult Delete([FromQuery] string email,string prev)
         {
             try
             {
-                var ed = _logic.Remove(email);
+                var ed = _logic.Remove(email,prev);
                 if (ed != null)
                 {
                     return Ok(ed);
@@ -90,14 +90,14 @@ namespace Service.Controllers
             }
         }
 
-        [HttpPut("Update/{email}")]
-        public IActionResult Update([FromRoute] string email, [FromBody] Models.Company ed)
+        [HttpPut("Update")]
+        public IActionResult Update([FromQuery] string email,string prev, [FromBody] Models.Company ed)
         {
             try
             {
                 if (!string.IsNullOrEmpty(email))
                 {
-                    _logic.UpdateEd(email, ed);
+                    _logic.UpdateEd(email,prev, ed);
                     return Ok(ed);
                 }
                 else

@@ -33,12 +33,20 @@
             return mail;
         }
 
+        public string Validate(string email,string password)
+        {
+            var mail = context.UserDetails.Where(m => m.Email == email && m.Password == password).FirstOrDefault();
+            return "Match Found";
+        }
+
         public UserDetails Update(UserDetails user)
         {
             context.Update(user);
             context.SaveChanges();
             return user;
         }
+
+
 
 
 

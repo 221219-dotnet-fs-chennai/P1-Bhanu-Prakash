@@ -1,0 +1,258 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="SignUp.js"></script>
+
+    <style>
+        body {
+            background: url(bgimage.jpg) no-repeat 0px 0px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        input[type=text],
+        input[type=password] {
+            width: 75%;
+            margin: 10px;
+            border-radius: 5px;
+            padding: 15px 18px;
+            box-sizing: border-box;
+        }
+
+        button:hover {
+            opacity: 0.6;
+            cursor: pointer;
+        }
+
+        
+        .submit-btn{
+            border: none;
+            outline: none;
+            background-color: #130e1c;
+            color: white;
+            padding: 1rem 16rem;
+        }
+
+        .button{
+            width: fit-content;
+            margin: auto;
+        }
+
+        form {
+            width: 35rem;
+            margin: auto;
+            margin-top: 10px;
+            color: rgb(8, 9, 19);
+            backdrop-filter: blur(1px) saturate(150%);
+            background-color: rgba(190, 190, 210, 0.582);
+            border-radius: 12px;
+            align-content: center;
+            border: 1px solid rgba(26, 2, 2, 0.125);
+        }
+
+
+
+
+        body {
+            margin: 10;
+        }
+
+        .header {
+            margin-left: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgba(27, 29, 103, 0.582);
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 50px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: rgba(222, 223, 234, 0.582);
+        }
+
+        .active {
+            background-color: #020a07;
+        }
+
+        li {
+            border-right: 1px solid #bbb;
+        }
+
+        li:last-child {
+            border-right: none;
+        }
+
+        form a {
+            text-decoration: none;
+        }
+
+        .line1 {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .line2 {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .line3 {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .round {
+            border-radius: 15%;
+        }
+
+        .form input {
+            outline: none;
+            font-size: .8rem;
+            border-radius: .2rem;
+            border: 1px solid rgb(113, 101, 101);
+            padding: .1rem;
+            background-color: transparent;
+        }
+
+        @media (min-width:280px) and (max-width:600px) {
+            .line1 {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .line2 {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .line3 {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            #top li {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <ul class="top">
+        <li style="float:right"><a href="Login.html">Back to Login</a></li>
+    </ul>
+    <form id="addSignUp">
+
+        <form class="addUser">
+            <div class="header">
+                <h1>Trainer Details</h1>
+            </div>
+            <div class="line1">
+
+                <input id="FName" type="text" placeholder="Enter First Name">
+                <input id="LName" type="text" placeholder="Enter Last Name">
+            </div>
+            <div class="line2">
+                <input id="Email" type="text"  placeholder="Enter Email">
+                <input id="Pswd" type="text"  placeholder="Enter Password">
+            </div>
+            <div class="line3">
+                <input id="gender" type="text"  placeholder="Enter Gender">
+                <input id="age" type="text"  placeholder="Enter Age">
+            </div>
+        </form>
+        <hr>
+
+
+        <form class="addSkill">
+            <div class="header">
+                <h1>Skill Details</h1>
+            </div>
+            <div class="line1">
+
+                <input id="skill" type="text" placeholder="Enter Skill">
+                <input id="prof" type="text" placeholder="Enter Proficiency">
+            </div>
+        </form>
+        <hr>
+
+
+        <form class="addExperience">
+            <div class="header">
+                <h1>Experience Details</h1>
+            </div>
+            <div class="line1">
+                <input id="prev" type="text" placeholder="Enter Pervious Company" >
+                <input id="tech" type="text" placeholder="Enter Technology" >
+            </div>
+            <div class="line2">
+                <input id="years" type="text"  placeholder="Enter Experience in years" >
+            </div>
+        </form>
+        <hr>
+
+
+        <form class="addEducation">
+            <div class="header">
+                <h1>Education Details</h1>
+            </div>
+            <div class="line1">
+                <input id="degree" type="text" placeholder="Enter Degree">
+                <input id="university" type="text" placeholder="Enter University Name" >
+            </div>
+            <div class="line2">
+                <input id="start" type="text"  placeholder="Enter Start Year" >
+                <input id="end" type="text"  placeholder="Enter End Year" >
+            </div>
+            <div class="line3">
+                <input id="grade" type="text"  placeholder="Enter Grade" >
+            </div>
+        </form>
+        <hr>
+
+
+        <form class="addContact">
+            <div class="header">
+                <h1>Contact Details</h1>
+            </div>
+            <div class="line1">
+
+                <input id="phone" type="text" placeholder="Enter Phone Number">
+                <input id="city" type="text" placeholder="Enter City">
+            </div>
+            <div class="line2">
+                <input id="state" type="text"  placeholder="Enter State" >
+                <input id="zipcode" type="text"  placeholder="Enter zipcode" >
+            </div>
+        </form>
+        <hr>
+
+        <div class="button">
+            <button id="add_btn" class="submit-btn" type="submit" onclick="addSignUp()">Submit</button>
+        </div>
+    </form>
+
+</body>
+</html>

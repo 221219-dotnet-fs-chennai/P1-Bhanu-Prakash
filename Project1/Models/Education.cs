@@ -6,7 +6,7 @@
         public Education(int UserId, string highereducation, string university, int startyear, int endyear, string grade,int EdId)
         {
             this.UserId = UserId;
-            this.HigherEducation = highereducation;
+            this.Degree = highereducation;
             this.University = university;
             this.Startyear = startyear;
             this.Endyear = endyear;
@@ -15,7 +15,7 @@
         }
 
         public int? UserId { get; set; }
-        public string? HigherEducation { get; set; }
+        public string? Degree { get; set; }
         public string? University { get; set; }
         public int? Startyear { get; set; }
         public int? Endyear { get; set; }
@@ -27,7 +27,7 @@
         {
             return (
                 $"*EducationId                              -               {EdId} " + "\n" +
-                $"*Higher Education                         -               {HigherEducation} " + "\n" +
+                $"*Higher Education                         -               {Degree} " + "\n" +
                 $"*University                               -               {University} " + "\n" +
                 $"*Start Year                               -               {Startyear} " + "\n" +
                 $"*End Year                                 -               {Endyear} " + "\n" +

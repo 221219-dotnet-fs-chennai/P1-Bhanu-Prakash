@@ -50,9 +50,9 @@ namespace BusinessLogic
             {
                 sk.SkillId = sk.SkillId;
                 sk.UserId = sk.UserId;
-                if(sk.Skill.IsNullOrEmpty() && sk.Skill != null) sk.Skill = sk.Skill;
+                if(user.Skill.IsNullOrEmpty() && sk.Skill != null) sk.Skill = sk.Skill;
                 else sk.Skill = user.Skill;
-                if (sk.Proficiency.IsNullOrEmpty() && sk.Proficiency != null) sk.Proficiency = sk.Proficiency;
+                if (user.Proficiency.IsNullOrEmpty() && sk.Proficiency != null) sk.Proficiency = sk.Proficiency;
                 else sk.Proficiency = user.Proficiency;
             }
             return _skillrepo.UpdateUser(sk);

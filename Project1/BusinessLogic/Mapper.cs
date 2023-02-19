@@ -13,8 +13,8 @@ namespace BusinessLogic
                 Id= ud.Id,
                 Firstname=ud.Firstname,
                 Lastname=ud.Lastname,
-                email=ud.Email,
-                password=ud.Password,
+                Email=ud.Email,
+                Password=ud.Password,
                 Gender=ud.Gender,
                 Age=ud.Age
             };
@@ -74,7 +74,7 @@ namespace BusinessLogic
             return new Models.Education()
             {
                 UserId = ed.UserId,
-                HigherEducation = ed.HigherEducation,
+                Degree = ed.HigherEducation,
                 University = ed.University,
                 Startyear = ed.Startyear,
                 Endyear = ed.Endyear,
@@ -88,7 +88,7 @@ namespace BusinessLogic
             return new df.Education()
             {
                 UserId = ed.UserId,
-                HigherEducation = ed.HigherEducation,
+                HigherEducation = ed.Degree,
                 University = ed.University,
                 Startyear = ed.Startyear,
                 Endyear = ed.Endyear,
@@ -139,10 +139,10 @@ namespace BusinessLogic
             return new Models.Contact()
             {
                 UserId = cd.UserId,
-                phone = cd.Phone,
+                Phone = cd.Phone,
                 City= cd.City,
                 State= cd.State,
-                zipcode=cd.Zipcode,
+                Zipcode=cd.Zipcode,
                 ContactId= cd.ContactId
             };
         }

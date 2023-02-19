@@ -10,8 +10,8 @@ namespace BusinessLogic
 
         IEnumerable<Models.Education> Get(string email);
 
-        Models.Education Remove(string email);
+        Models.Education Remove(string email,string degree);
 
-        df.Education UpdateEd(string email, Models.Education user);
+        df.Education UpdateEd(string email,string degree, Models.Education user);
     }
 }

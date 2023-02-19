@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Login</title>
+  <style type="text/css">
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin: 50px auto;
+      max-width: 1000px;
+    }
+    .container a{
+      text-decoration: none;
+    }
+
+    body {
+      background: url(bgimage.jpg) no-repeat 0px 0px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      margin: 20px;
+      padding: 20px;
+      border-radius: 5px;
+      max-width: 220px;
+      text-align: center;
+      font-family: arial;
+      backdrop-filter: blur(1px) saturate(150%);
+      background-color: rgba(190, 190, 210, 0.582);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.1);
+    }
+
+    .card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    .card h4 {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+
+    .card2 {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      margin: 20px;
+      padding: 20px;
+      border-radius: 5px;
+      max-width: 220px;
+      text-align: center;
+      font-family: arial;
+      backdrop-filter: blur(1px) saturate(150%);
+      background-color: rgba(190, 190, 210, 0.582);
+      transition: transform 0.3s;
+    }
+
+    .card2:hover {
+      transform: scale(1.1);
+    }
+
+    .card2 img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    .card2 h4 {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .card2 p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+
+    .card3 {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      margin: 20px;
+      padding: 20px;
+      border-radius: 5px;
+      max-width: 225px;
+      text-align: center;
+      font-family: arial;
+      backdrop-filter: blur(1px) saturate(150%);
+      background-color: rgba(190, 190, 210, 0.582);
+      transition: transform 0.3s;
+    }
+
+    .card3:hover {
+      transform: scale(1.1);
+    }
+
+    .card3 img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    .card3 h4 {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .card3 p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+
+    .card4 {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      margin: 20px;
+      padding: 20px;
+      border-radius: 5px;
+      max-width: 210px;
+      text-align: center;
+      font-family: arial;
+      backdrop-filter: blur(1px) saturate(150%);
+      background-color: rgba(190, 190, 210, 0.582);
+      transition: transform 0.3s;
+    }
+
+    .card4:hover {
+      transform: scale(1.1);
+    }
+
+    .card4 img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    .card4 h4 {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .card4 p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+
+    .card5 {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      margin: 20px;
+      padding: 20px;
+      border-radius: 5px;
+      max-width: 225px;
+      text-align: center;
+      font-family: arial;
+      backdrop-filter: blur(1px) saturate(150%);
+      background-color: rgba(190, 190, 210, 0.582);
+      transition: transform 0.3s;
+    }
+
+    .card5:hover {
+      transform: scale(1.1);
+    }
+
+    .card5 img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    .card5 h4 {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .card5 p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+
+    .button2 {
+      display: inline-block;
+      transition: all 0.2s ease-in;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      color: #090909;
+      padding: 0.7em 1.7em;
+      font-size: 18px;
+      border-radius: 0.5em;
+      background: #e8ebe6;
+      border: 1px solid #e8e8e8;
+
+    }
+
+    .button2:active {
+      color: #666;
+      box-shadow: inset 4px 4px 12px #c5c5c5,
+        inset -4px -4px 12px #ffffff;
+    }
+
+    .button2:before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%) scaleY(1) scaleX(1.25);
+      top: 100%;
+      width: 10px;
+      height: 20px;
+      background-color: rgba(0, 0, 0, 0.05);
+      border-radius: 50%;
+      display: block;
+      transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+      z-index: -1;
+    }
+
+    .button2:after {
+      content: "";
+      position: absolute;
+      left: 55%;
+      transform: translateX(-50%) scaleY(1) scaleX(1.45);
+      top: 180%;
+      width: 160%;
+      height: 190%;
+      background-color: linear-gradient(#e66465, #9198e5);
+      border-radius: 50%;
+      display: block;
+      transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+      z-index: -1;
+    }
+
+    .button2:hover {
+      color: #ffffff;
+      border: 1px solid linear-gradient(#e66465, #9198e5);
+    }
+
+    .button2:hover:before {
+      top: -35%;
+      background-color: linear-gradient(#e66465, #9198e5);
+      transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+    }
+
+    .button2:hover:after {
+      top: -45%;
+      background: linear-gradient(#e66465, #9198e5);
+      transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+    }
+
+
+    .button3 {
+      display: inline-block;
+      transition: all 0.2s ease-in;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      color: #090909;
+      padding: 0.21em 1.7em;
+      font-size: 18px;
+      border-radius: 0.5em;
+      background: #e8ebe6;
+      border: 1px solid #e8e8e8;
+
+    }
+
+    .button3:active {
+      color: #666;
+      box-shadow: inset 4px 4px 12px #c5c5c5,
+        inset -4px -4px 12px #ffffff;
+    }
+
+    .button3:before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%) scaleY(1) scaleX(1.25);
+      top: 100%;
+      width: 10px;
+      height: 20px;
+      background-color: rgba(0, 0, 0, 0.05);
+      border-radius: 50%;
+      display: block;
+      transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+      z-index: -1;
+    }
+
+    .button3:after {
+      content: "";
+      position: absolute;
+      left: 55%;
+      transform: translateX(-50%) scaleY(1) scaleX(1.45);
+      top: 180%;
+      width: 160%;
+      height: 190%;
+      background-color: linear-gradient(#e66465, #9198e5);
+      border-radius: 50%;
+      display: block;
+      transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+      z-index: -1;
+    }
+
+    .button3:hover {
+      color: #ffffff;
+      border: 1px solid linear-gradient(#e66465, #9198e5);
+    }
+
+    .button3:hover:before {
+      top: -35%;
+      background-color: linear-gradient(#e66465, #9198e5);
+      transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+    }
+
+    .button3:hover:after {
+      top: -45%;
+      background: linear-gradient(#e66465, #9198e5);
+      transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+    }
+
+
+
+    li a {
+      display: block;
+      color: rgb(26, 33, 23);
+      text-align: center;
+      padding: 14px 50px;
+      text-decoration: none;
+      text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+      background-color: rgba(15, 27, 36, 0.582);
+    }
+
+    body {
+            margin: 10;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgba(27, 29, 103, 0.582);
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 50px;
+        }
+
+        li a:hover:not(.active) {
+            background-color: rgba(222, 223, 234, 0.582);
+        }
+
+        .active {
+            background-color: #020a07;
+        }
+
+        li {
+            border-right: 1px solid #bbb;
+        }
+
+        li:last-child {
+            border-right: none;
+        }
+
+  </style>
+</head>
+
+<body>
+
+  
+  <ul class="top">
+    <li style="float:right"><a href="Login.html">Logout</a></li>
+  </ul>
+  <div class="container">
+    <div class="card">
+      <img src="2021flat_248.jpg" alt="Card Image">
+      <h4>Trainer Details</h4>
+      <button class="button2"><a href="GetUser.html">View</a></button><br><br>
+      <button class="button2"><a href="UpdateUser.html">Update</a></button><br><br>
+      <button class="button2"><a href="DeleteUser.html">Delete</a></button>
+    </div>
+
+    <div class="card2">
+      <img src="hands.jpg" alt="Card Image">
+      <h4>Skills</h4>
+      <button class="button3"><a href="AddSkill.html">ADD</a></button><br><br>
+      <button class="button3"><a href="GetSkill.html">View</a></button><br><br>
+      <button class="button3"><a href="UpdateSkill.html">Update</a></button><br><br>
+      <button class="button3"><a href="DeleteSkill.html">Delete</a></button>
+    </div>
+
+    <div class="card3">
+      <img src="background.jpg" alt="Card Image">
+      <h4>Experience</h4>
+      <button class="button3"><a href="AddExp.html">ADD</a></button><br><br>
+      <button class="button3"><a href="GetCompany.html">View</a></button><br><br>
+      <button class="button3"><a href="UpdateExp.html">Update</a></button><br><br>
+      <button class="button3"><a href="DeleteExp.html">Delete</a></button>
+    </div>
+
+    <div class="card4">
+      <img src="textbook.jpg" alt="Card Image">
+      <h4>Education</h4>
+      <button class="button3"><a href="AddEdu.html">ADD</a></button><br><br>
+      <button class="button3"><a href="GetEdu.html">View</a></button><br><br>
+      <button class="button3"><a href="UpdateEdu.html">Update</a></button><br><br>
+      <button class="button3"><a href="DeleteEdu.html">Delete</a></button>
+    </div>
+
+    <div class="card5">
+      <img src="map.jpg" alt="Card Image">
+      <h4>Contact</h4>
+      <button class="button2"><a href="GetContact.html">View</a></button><br><br>
+      <button class="button2"><a href="UpdateContact.html">Update</a></button><br><br>
+      <button class="button2"><a href="DeleteContact.html">Delete</a></button>
+    </div>
+  </div>
+</body>
+
+</html>

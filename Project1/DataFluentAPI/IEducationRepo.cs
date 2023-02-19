@@ -9,7 +9,7 @@ namespace DataFluentAPI
 
         List<Education> GetAll();
 
-        Education Delete(int t);
+        Education Delete(int t,string degree);
 
         Education UpdateEd(Education t);
 
