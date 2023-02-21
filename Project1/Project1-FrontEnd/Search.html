@@ -1,0 +1,160 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="Login.css"> -->
+    <script src="Search.js"></script>
+
+    <title>Search</title>
+    <style>
+        /* .input-group {
+            display: flex;
+            align-items: center;
+        } */
+
+        .input {
+            min-height: 50px;
+            max-width: 150px;
+            padding: 0 1rem;
+            color: #130f0f;
+            font-size: 15px;
+            border: 1px solid #5e4dcd;
+            border-radius: 6px 0 0 6px;
+            /* background-color: transparent; */
+        }
+
+
+        button:hover {
+            background-color: #a2a1dc;
+        }
+
+        body {
+            background: url(bgimage.jpg) no-repeat 0px 0px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        input[type=text],
+        input[type=password] {
+            width: 75%;
+            margin: 10px;
+            border-radius: 5px;
+            padding: 15px 18px;
+            box-sizing: border-box;
+        }
+
+        button:hover {
+            opacity: 0.6;
+            cursor: pointer;
+        }
+
+        button {
+            background-color: #5e4dcd;
+            color: #fff;
+            font-size: 15px;
+            cursor: pointer;
+
+            transition: background-color .3s ease-in-out;
+            color: white;
+            padding: 14px 20px;
+            border-radius: 5px;
+            margin: 7px 0;
+            width: 10p0x;
+            font-size: 18px;
+        }
+
+
+
+        #searchSkill,#searchAge {
+            width: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #searchsk,
+        #searchAge1 {
+            width: 35rem;
+            margin: auto;
+            margin-top: 100px;
+            color: rgb(8, 9, 19);
+            backdrop-filter: blur(1px) saturate(150%);
+            background-color: rgba(190, 190, 210, 0.582);
+            border-radius: 12px;
+            border: 1px solid rgba(26, 2, 2, 0.125);
+        }
+
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgba(27, 29, 103, 0.582);
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 50px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: rgba(222, 223, 234, 0.582);
+        }
+
+        .active {
+            background-color: #020a07;
+        }
+
+        li {
+            border-right: 1px solid #bbb;
+        }
+
+        li:last-child {
+            border-right: none;
+        }
+
+
+
+        /* .input:focus,
+        .input:focus-visible {
+            border-color: #3898EC;
+            outline: none;
+        } */
+    </style>
+</head>
+
+<body>
+    <center>
+        <ul class="top">
+            <li><a class="active" href="Search.html">Filter</a></li>
+            <li style="float:right"><a href="view.html">Back</a></li>
+          </ul>
+        <div class="header">
+            <div id="searchSk">
+                <input type="text" id="skill" class="input" placeholder="Enter Skill" autocomplete="off">
+                <button class="button1" type="submit" onclick="searchSkill()">Search</button>
+            </div>
+            <div id="searchAge1">
+                <input type="text" id="age" class="input" placeholder="Enter Above Age" autocomplete="off">
+                <button class="button1" type="submit" onclick="searchAge()">Search</button>
+            </div>
+    </center>
+
+
+
+
+
+</body>
+
+</html>
