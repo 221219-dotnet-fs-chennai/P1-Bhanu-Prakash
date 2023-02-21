@@ -31,5 +31,5 @@ async function addExperience() {
         })
         .then((response) => console.log(response))
         alert("Added Experience Details");
-    //window.location.href = "view.html"
+        window.location.href = "view.html"
 }

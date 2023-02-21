@@ -28,5 +28,5 @@ async function addSkill() {
         })
         .then((response) => console.log(response))
         alert("Skills Added Successfull!")
-    //window.location.href = "view.html"
+        window.location.href = "view.html"
 }

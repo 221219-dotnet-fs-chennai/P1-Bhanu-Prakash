@@ -58,7 +58,7 @@
     </center>
         <div>
             <input id="Email" type="text" style="margin-left: 75px;" placeholder="Enter email" required>
-            <input id="Password" type="password"  style="margin-left: 75px;" placeholder="Enter Password" required="">
+            <input id="password" type="password"  style="margin-left: 75px;" placeholder="Enter Password" required="">
         </div>
         <button type="submit" style="margin-left: 75px;">Sign Up</button>
     </form>
@@ -69,12 +69,14 @@
         Loginform.addEventListener('submit', e=>{
             e.preventDefault();
             var email = document.getElementById('Email').value;
-                    window.location.replace("Registration.html");
-                    localStorage.setItem("email", email);
-                    console.log(email)
+            var password = document.getElementById('password').value;
+            window.location.replace("Registration.html");
+            localStorage.setItem("email", email);
+            localStorage.setItem("password",password)
+            console.log(email)
+            console.log(password)
         })
     </script>
-
 </body>
 
 </html>

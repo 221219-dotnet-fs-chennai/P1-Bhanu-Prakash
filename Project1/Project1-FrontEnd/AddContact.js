@@ -35,5 +35,5 @@ async function addContact() {
         })
         .then((response) => console.log(response))
         alert("Added Contact Details");
-    //window.location.href = "view.html"
+        window.location.href = "view.html"
 }

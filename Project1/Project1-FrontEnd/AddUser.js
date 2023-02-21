@@ -6,19 +6,18 @@ async function addUser() {
     });
 
     let email = localStorage.getItem('email')
+    let password = localStorage.getItem('password')
     email = email.replace(/['‘’"“”]/g, '')
 
     let fname1 = document.getElementById("FName").value;
     let lname1 = document.getElementById("LName").value;
-    let email1 = document.getElementById("Email").value;
-    let pswd1 = document.getElementById("Pswd").value;
+    let email1 = email;
+    let pswd1 = password;
     let gender1 = document.getElementById("gender").value;
     let age1 = document.getElementById("age").value;
 
 
-    await fetch("https://localhost:7026/api/User/AddTrainer?" + new URLSearchParams({
-        email: email
-    }),
+    await fetch("https://localhost:7026/api/User/AddTrainer?",
         {
             method: "POST",
             body: JSON.stringify({
@@ -38,5 +37,5 @@ async function addUser() {
         })
         .then((response) => console.log(response))
         alert("added User Details!")
-    //window.location.href = "view.html"
+    window.location.href = "view.html"
 }

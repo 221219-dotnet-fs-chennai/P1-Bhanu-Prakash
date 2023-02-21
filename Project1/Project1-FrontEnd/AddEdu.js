@@ -37,5 +37,5 @@ async function addEducation() {
         })
         .then((response) => console.log(response))
         alert("Added Education Details")
-    //window.location.href = "view.html"
+        window.location.href = "view.html"
 }

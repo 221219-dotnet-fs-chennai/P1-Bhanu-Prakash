@@ -78,13 +78,25 @@
         <div>
             <input id="FName" type="text" style="margin-left: 75px;" placeholder="Enter First Name" required>
             <input id="LName" type="text" style="margin-left: 75px;" placeholder="Enter Last Name" >
-            <input id="Email" type="text" style="margin-left: 75px;" placeholder="Enter Email" required>
-            <input id="Pswd" type="password" style="margin-left: 75px;" placeholder="Enter Password" required>
+            <!-- <input id="Email" type="text" style="margin-left: 75px;" placeholder="Enter Email" required>
+            <input id="Pswd" type="password" style="margin-left: 75px;" placeholder="Enter Password" required> -->
             <input id="gender" type="text" style="margin-left: 75px;" placeholder="Enter Gender" >
             <input id="age" type="text" style="margin-left: 75px;" placeholder="Enter Age" >
             <button type="submit" onclick="addUser()" style="margin-left: 75px;">Submit</button>
             </div>
     </form>
+
+    <!-- <script>
+        const Loginform = document.querySelector('.form');
+        console.log(Loginform);
+        Loginform.addEventListener('submit', e=>{
+            e.preventDefault();
+            var email = document.getElementById('Email').value;
+                    //window.location.replace("view.html");
+                    localStorage.setItem("email", email);
+                    console.log(email)
+        })
+    </script> -->
     </form>
 </body>
 
